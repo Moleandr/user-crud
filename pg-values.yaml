@@ -1,0 +1,7 @@
+auth:
+  database: app
+  username: app
+  existingSecret: pg-secret
+  secretKeys:
+    userPasswordKey: password
+    adminPasswordKey: password

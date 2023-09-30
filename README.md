@@ -1,22 +1,23 @@
 ### Запуск приложения
 
-- Установить pg secret
+Установить pg secret
 ```shell
 kubectl apply -f .kube/pg-secret.yml
 ```
 
-- Запустить БД
+Запустить БД
 ```shell
 helm install postgresql oci://registry-1.docker.io/bitnamicharts/postgresql -f pg-values.yaml
 ```
 
-- Применить манифесты
+Применить манифесты
 ```shell
 kubectl apply -f .kube/
 ```
 
 
 ### Миграции
+> ! Запускать только при разработке, к kube выполняются через Job
 
 Создать папку с миграциями
 ```shell
